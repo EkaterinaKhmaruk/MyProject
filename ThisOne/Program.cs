@@ -3,12 +3,20 @@
  Первоначальный массив можно ввести с клавиатуры, либо задать на старте
   выполнения алгоритма. При решении не рекомендуется пользоваться коллекциями, 
   лучше обойтись исключительно массивами.*/
-  
+
+Console.WriteLine();
 Console.Write("Введите слова: ");
 string? words = Console.ReadLine();
 
 string[] newWords = words!.Split(new char[] { ',', ' ' }, StringSplitOptions.RemoveEmptyEntries);
-for (int i = 0; i <newWords.Length; i++)
+Console.Write("Слова, в которых меньше 4 символов: "); 
+    
+foreach (string word in newWords)
 {
-    Console.WriteLine(newWords[i]);
+    int foundLength = 3;
+    if (word.Length <= foundLength)
+        {
+           Console.Write($"{word} ");
+        }
+        
 }
